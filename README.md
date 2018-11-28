@@ -4,7 +4,7 @@
 
 *	src - arduino code for this project
 *	models - svg and stl files for the enclosure
-*	diagrams - circuit diagrams for the electronics
+*	docs - circuit diagrams, documentation, etc.
 
 ##README Contents:
 
@@ -23,7 +23,7 @@
 
 *	[Adafruit Feather HUZZAH with ESP8266](https://www.adafruit.com/product/2821)
 *	[8-channel Bi-directional Logic Level Converter](https://www.adafruit.com/product/395)
-*	Placeholder for whichever NeoPixel setup I decide to go with.
+*	[NeoPixel Ring - 16 x 5050 RGB LED with Integrated Drivers](https://www.adafruit.com/product/1463)
 *	[Arcade Button with LED - 30mm Clear](https://www.adafruit.com/product/3491)
 *	[Arcade Button with LED - 30mm Red](https://www.adafruit.com/product/3489)
 *	[Arcade Button with LED - 30mm Green](https://www.adafruit.com/product/3487)
