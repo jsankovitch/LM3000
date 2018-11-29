@@ -1,9 +1,4 @@
 //Note:  You will need to provide lightMasterConfig.h which contains SSID, SSID Password, and your lifx application secret.
-/*TODO:
- * maybe take out all the serial writes.
- * Add error colors for wifi connect.
- *  For error, create second array with only red and pass that to startup look.  Change that to statusLights or something like that.
-*/
 
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
@@ -13,9 +8,10 @@
 const int redButtonPin = 12;
 const int blueButtonPin = 13;
 const int yellowButtonPin = 15;
+const int whiteButtonPin = 16;
 const int goButtonPin = 14;
-const int neoPixelPin = 2;
 
+const int neoPixelPin = 2;
 const int numberOfPixels = 16;
 
 Adafruit_NeoPixel previewRing = Adafruit_NeoPixel(numberOfPixels, neoPixelPin);
@@ -26,7 +22,6 @@ const uint32_t yellow = previewRing.Color(128, 128, 0);
 const uint32_t green = previewRing.Color(0, 128, 0);
 const uint32_t purple = previewRing.Color(128, 0, 128);
 const uint32_t orange = previewRing.Color(128, 32, 0);
-const uint32_t off = previewRing.Color(0, 0, 0, 0);
 const uint32_t white = previewRing.Color(32, 32, 32);
 
 uint32_t colors[] = {red,yellow,green,blue};
@@ -36,6 +31,7 @@ String currentColor = "white";
 int redButtonState = 0;
 int blueButtonState = 0;
 int yellowButtonState = 0;
+int whiteButtonState = 0;
 int goButtonState = 0;
 
 void setup()
@@ -43,12 +39,11 @@ void setup()
     previewRing.setBrightness(64);
     previewRing.begin();
     startupLook(colors);
-    //updatePreview(off);
-    //previewRing.show();
 
     pinMode(redButtonPin, INPUT);
     pinMode(blueButtonPin, INPUT);
     pinMode(yellowButtonPin, INPUT);
+    pinMode(whiteButtonPin, INPUT);
     pinMode(goButtonPin, INPUT);
 
     connectToWifi(SSID, SSID_PASSWORD);
@@ -62,6 +57,7 @@ void loop()
     redButtonState = digitalRead(redButtonPin);
     blueButtonState = digitalRead(blueButtonPin);
     yellowButtonState = digitalRead(yellowButtonPin);
+    whiteButtonState = digitalRead(whiteButtonPin);
     goButtonState = digitalRead(goButtonPin);
 
     if (redButtonState == HIGH) {
@@ -77,7 +73,6 @@ void loop()
             updatePreview(orange);
             currentColor = "orange";
         }
-        //delay(500);
     }
 
     if (blueButtonState == HIGH) {
@@ -93,7 +88,6 @@ void loop()
             updatePreview(green);
             currentColor = "green";
         }
-        //delay(500);
     }
 
     if (yellowButtonState == HIGH) {
@@ -109,18 +103,19 @@ void loop()
             updatePreview(orange);
             currentColor = "orange";
         }
-        //delay(500);
+    }
+
+    if (whiteButtonState == HIGH) {
+        updatePreview(white);
+        currentColor = "white";
     }
 
     if (goButtonState == HIGH) {
         sendColor(LIFXSELECTOR, currentColor);
-        updatePreview(white);
-        currentColor = "white";
         delay(500);
     }
 }
 
-//TODO Why doesn't using the passed in variables work?
 void connectToWifi(String ssid, String ssid_password)
 {
     Serial.begin(115200);
