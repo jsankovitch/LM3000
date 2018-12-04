@@ -7,8 +7,8 @@
 
 const int redButtonPin = 12;
 const int blueButtonPin = 13;
-const int yellowButtonPin = 15;
-const int whiteButtonPin = 16;
+const int yellowButtonPin = 4;
+const int whiteButtonPin = 5;
 const int goButtonPin = 14;
 
 const int neoPixelPin = 2;
@@ -40,11 +40,11 @@ void setup()
     previewRing.begin();
     startupLook(colors);
 
-    pinMode(redButtonPin, INPUT);
-    pinMode(blueButtonPin, INPUT);
-    pinMode(yellowButtonPin, INPUT);
-    pinMode(whiteButtonPin, INPUT);
-    pinMode(goButtonPin, INPUT);
+    pinMode(redButtonPin, INPUT_PULLUP);
+    pinMode(blueButtonPin, INPUT_PULLUP);
+    pinMode(yellowButtonPin, INPUT_PULLUP);
+    pinMode(whiteButtonPin, INPUT_PULLUP);
+    pinMode(goButtonPin, INPUT_PULLUP);
 
     connectToWifi(SSID, SSID_PASSWORD);
 
@@ -60,7 +60,7 @@ void loop()
     whiteButtonState = digitalRead(whiteButtonPin);
     goButtonState = digitalRead(goButtonPin);
 
-    if (redButtonState == HIGH) {
+    if (redButtonState == LOW) {
         if (currentColor == "white") {
             updatePreview(red);
             currentColor = "red";
@@ -75,7 +75,7 @@ void loop()
         }
     }
 
-    if (blueButtonState == HIGH) {
+    if (blueButtonState == LOW) {
         if (currentColor == "white"){
             updatePreview(blue);
             currentColor = "blue";
@@ -90,7 +90,7 @@ void loop()
         }
     }
 
-    if (yellowButtonState == HIGH) {
+    if (yellowButtonState == LOW) {
         if (currentColor == "white"){
             updatePreview(yellow);
             currentColor = "yellow";
@@ -105,12 +105,12 @@ void loop()
         }
     }
 
-    if (whiteButtonState == HIGH) {
+    if (whiteButtonState == LOW) {
         updatePreview(white);
         currentColor = "white";
     }
 
-    if (goButtonState == HIGH) {
+    if (goButtonState == LOW) {
         sendColor(LIFXSELECTOR, currentColor);
         delay(500);
     }
