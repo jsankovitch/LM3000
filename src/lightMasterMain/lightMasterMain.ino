@@ -27,6 +27,7 @@ const uint32_t white = previewRing.Color(32, 32, 32);
 uint32_t colors[] = {red,yellow,green,blue};
 
 String currentColor = "white";
+String body = "{\"power\":\"on\",\"color\":\"white\",\"fast\":true}";
 
 int redButtonState = 0;
 int blueButtonState = 0;
@@ -48,8 +49,7 @@ void setup()
 
     connectToWifi(SSID, SSID_PASSWORD);
 
-    turnOnLights(LIFXSELECTOR);
-    sendColor(LIFXSELECTOR, currentColor);
+    setLightState(body, LIFXSELECTOR);
 }
 
 void loop()
@@ -64,14 +64,17 @@ void loop()
         if (currentColor == "white") {
             updatePreview(red);
             currentColor = "red";
+            body = "{\"color\":\"red\",\"fast\":true}";
         }
         else if (currentColor == "blue"){
             updatePreview(purple);
             currentColor = "purple";
+            body = "{\"color\":\"purple\",\"fast\":true}";
         }
         else if (currentColor == "yellow"){
             updatePreview(orange);
             currentColor = "orange";
+            body = "{\"color\":\"orange\",\"fast\":true}";
         }
     }
 
@@ -79,14 +82,17 @@ void loop()
         if (currentColor == "white"){
             updatePreview(blue);
             currentColor = "blue";
+            body = "{\"color\":\"blue\",\"fast\":true}";
         }
         else if (currentColor == "red"){
             updatePreview(purple);
             currentColor = "purple";
+            body = "{\"color\":\"purple\",\"fast\":true}";
         }
         else if (currentColor == "yellow"){
             updatePreview(green);
             currentColor = "green";
+            body = "{\"color\":\"green\",\"fast\":true}";
         }
     }
 
@@ -94,24 +100,28 @@ void loop()
         if (currentColor == "white"){
             updatePreview(yellow);
             currentColor = "yellow";
+            body = "{\"color\":\"yellow\",\"fast\":true}";
         }
         else if (currentColor == "blue"){
             updatePreview(green);
             currentColor = "green";
+            body = "{\"color\":\"green\",\"fast\":true}";
         }
         else if (currentColor == "red") {
             updatePreview(orange);
             currentColor = "orange";
+            body = "{\"color\":\"orange\",\"fast\":true}";
         }
     }
 
     if (whiteButtonState == LOW) {
         updatePreview(white);
         currentColor = "white";
+        body = "{\"color\":\"white\",\"fast\":true}";
     }
 
     if (goButtonState == LOW) {
-        sendColor(LIFXSELECTOR, currentColor);
+        setLightState(body, LIFXSELECTOR);
         delay(500);
     }
 }
@@ -137,45 +147,7 @@ void connectToWifi(String ssid, String ssid_password)
     updatePreview(white);
 }
 
-void turnOnLights(String selector){
-    String body = "{\"power\":\"on\",\"fast\":true}";
-    WiFiClientSecure client;
-    Serial.print("connecting to ");
-    Serial.println(HOST);
-    if (!client.connect(HOST, SSL_PORT))
-    {
-        Serial.println("connection failed");
-        return;
-    }
-
-    String url = "/v1/lights/" + selector + "/state";
-    Serial.print("requesting URL: ");
-    Serial.println(url);
-
-    client.print(String("PUT ") + url + " HTTP/1.1\r\n" +
-                 "Host: " + HOST + "\r\n" +
-                 "Authorization: Bearer " + AUTH_TOKEN + "\r\n" +
-                 "Connection: close\r\n" +
-                 "Content-Type: application/json\r\n" +
-                 "Content-Length: " + body.length() + "\r\n\r\n" +
-                 body + "\r\n");
-
-    Serial.println("request sent");
-
-    while (client.connected() || client.available())
-    {
-        if (client.available())
-        {
-            String line = client.readStringUntil('\n');
-            Serial.println(line);
-        }
-    }
-    client.stop();
-    Serial.println("\n[Disconnected]");
-}
-
-void sendColor(String selector, String newColor){
-    String body = "{\"color\":\"" + newColor + "\",\"fast\":true}";
+void setLightState(String body, String selector){
     WiFiClientSecure client;
     Serial.print("connecting to ");
     Serial.println(HOST);
