@@ -22,18 +22,14 @@
 ##Parts List
 
 *	[Adafruit Feather HUZZAH with ESP8266](https://www.adafruit.com/product/2821)
-*	[8-channel Bi-directional Logic Level Converter](https://www.adafruit.com/product/395)
 *	[NeoPixel Ring - 16 x 5050 RGB LED with Integrated Drivers](https://www.adafruit.com/product/1463)
 *   [Arcade Button - 30mm Translucent Clear](https://www.adafruit.com/product/471)
 *	[Arcade Button with LED - 30mm Clear](https://www.adafruit.com/product/3491)
 *	[Arcade Button with LED - 30mm Red](https://www.adafruit.com/product/3489)
-*	[Arcade Button with LED - 30mm Green](https://www.adafruit.com/product/3487)
 *	[Arcade Button with LED - 30mm Blue](https://www.adafruit.com/product/3490)
 *	[Arcade Button with LED - 30mm Yellow](https://www.adafruit.com/product/3488)
-*	[Illuminated Toggle Switch with Cover - Green](https://www.adafruit.com/product/3307)
-*	[Lithium Ion Battery Pack - 3.7V 4400mAh](https://www.adafruit.com/product/354)
+*	[Lithium Ion Polymer Battery - 3.7v 2500mAh](https://www.adafruit.com/product/328)
 *	[Breadboard-Friendly 2.1mm DC Barrel Jack](https://www.adafruit.com/product/373)
-*	[4700uF 10v Electrolytic Capacitor](https://www.adafruit.com/product/1589)
 *	[5V 2A \(2000mA\) switching power supply - UL Listed](https://www.adafruit.com/product/276)
 *	[Adafruit Perma-Proto Half-sized Breadboard PCB](https://www.adafruit.com/product/1609)
 *	[22AWG Solid Core Wire](https://www.adafruit.com/product/3174)
@@ -42,7 +38,6 @@
 ##Tools List
 
 *	3D Printer \(Optional\)
-*	Shaper Origin \(Optional\)
 *	Soldering Iron
 *	Solder \(I use lead-free\)
 *	Hot Glue Gun
