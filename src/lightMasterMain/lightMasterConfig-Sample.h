@@ -1,4 +1,5 @@
 //Holds the values for SSID, SSID password, application secret, and any other data that needs to be secured.
+//Be sure to remove '-Sample' from the file name.
 
 #ifndef lightMasterConfig_h
 #define lightMasterConfig_h
