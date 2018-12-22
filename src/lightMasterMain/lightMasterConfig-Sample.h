@@ -11,6 +11,6 @@
 #define AUTH_TOKEN "" //lifx auth token
 #define HOST "api.lifx.com"
 #define SSL_PORT 443
-#define LIFXSELECTOR "" //selector value for lifx calls
+#define LIFXSELECTOR "" //selector value for lifx calls.  See https://api.developer.lifx.com/docs/selectors
 
 #endif
