@@ -51,13 +51,15 @@ So, objectives for this build are as follows:
 
 ##Instructions
 
-#Hardware Internals
+###Hardware Internals
 
 If this is your first time using the Adafruit Feather HUZZAH ESP8266, I suggest following their excellent overview documentation located [here](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/) to get setup.  This will take you through the general features of the board, how to solder headers (you need male headers for this project), and getting your Arduino IDE configured to flash code.  Note: you can skip the section on NodeMCU Lua as it is not used in this project.
 
 My other recommendation around hardware is to "pre-fit" the components and connect them according to the diagram below without soldering anything.  You can do this with a breadboard, wires designed to fit a breadboard, and alligator clips.  This way you can make sure everything works prior to making connections that are more difficult to remove/redo if you find you have a faulty component or misread the wiring diagram.
 
-#Prep the Software
+![Circuit diagram](http://jasonsankovitch.com/wp-content/uploads/2018/12/lm3000_fritz_diagram.png)
+
+###Prep the Software
 
 If you don't have one already, you will need to create a LIFX developer account (don't worry, it's free).  To do so, go to the [LIFX Developer Zone page](https://community.lifx.com/) and click on "Sign Up."  You will also need a LIFX Cloud account (I don't know why they are separate) through your LIFX app.  Once you've setup your Cloud account, log in [here](https://cloud.lifx.com/), click on your email address, and select Settings.  You should see a section called "Personal access tokens."  Click the button to "Generate New Token," type a descriptive name in the text field, and hit "Generate."  Copy and paste the string that pops up and save it to a secure location.  This collection of numbers and letters is your access token and you cannot get it again after you leave this page.  The only action you will be able to take with it at a later time is to revoke the token (which is why it's important to name it something appropriate).
 
@@ -72,7 +74,7 @@ Once you've updated the values, load the lightMasterMain.ino file into the Ardui
 
 Insert gif here of the gem lighting up.
 
-#Printing the Enclosure
+###Printing the Enclosure
 
 STL files in the models folder of this repo as well as on Thingiverse here.  Printed without supports.  20% infill for all but the translucent button which is 100% infill.
 
@@ -82,7 +84,7 @@ https://github.com/Microsoft/vscode-arduino
 
 
 
-#Bringing it Together
+###Bringing it Together
 
 ##Lessons Learned
 
