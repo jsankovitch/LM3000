@@ -1,5 +1,7 @@
 #**Light Master 3000**
 
+An open source remote control for your LIFX smart bulbs.
+
 ##Folder Descriptions:
 
 *	src - arduino code for this project
@@ -86,7 +88,23 @@ If everything is working as expected, you're good to move on to creating the enc
 
 ###Printing the Enclosure
 
-STL files in the models folder of this repo as well as on Thingiverse here.  Printed without supports.  20% infill for all but the translucent button which is 100% infill.
+Printing the enclosure is pretty straight forward.  I used PLA for my build, but any rigid plastic should work.  I suggest using the material you are most comfortable working with as tolerances are fairly important in this build as the enclosure is held together by friction fit parts.
+
+Parts are as follows:
+
+* controller_sled_v1.stl - This is the part that holds the completed circuit board.
+* grip_detail_v1.stl - Small pieces that make the grip thicker.  I made these separate parts so they could be printed in different colors.
+* housing_base_v1.stl - This is the base of the device and holds the battery, power switch, and the circuit board via the controller sled.
+* main_body_v1.stl - This is the upper part of the device.  The buttons and rgb ring are attached to this piece and it slides over the housing base.
+* rgb_button_ring_v1.stl - This is the housing for the 16 LED Neopixel we'll use to indicate the color to be sent to LIFX.  It fits into the center of the main body.
+* rgb_button_ring_spacer_v1_OPTIONAL.stl - This fits inside the rgb button ring AFTER you place the Neopixel inside if you need something to hold the Neopixel in place.  If the ring is secure without it, you don't have to print it.
+
+All of these parts can be found in the /models directory of this repository as well as on Thingiverse.
+
+I highly recommend printing the controller sled and rgb button ring at 100% infill.  The sled can be a tight fit on the protoboard and one wrong move can snap a part printed with even a fairly moderate leve of infill.  The rgb ring will nicely diffuse the Neopixel when printed at 100%.  Any lower, and you'll see the pattern of the infill.
+
+All other items can be printed without supports and at the infill level you prefer.  For my build, I chose 20-30% infill as my son can be rough with toys and I wanted it to survive a drop or two.
+
 
 https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/using-arduino-ide
 
