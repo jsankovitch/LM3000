@@ -1,4 +1,5 @@
 //Holds the values for SSID, SSID password, application secret, and any other data that needs to be secured.
+//Be sure to remove '-Sample' from the file name.
 
 #ifndef lightMasterConfig_h
 #define lightMasterConfig_h
@@ -10,6 +11,6 @@
 #define AUTH_TOKEN "" //lifx auth token
 #define HOST "api.lifx.com"
 #define SSL_PORT 443
-#define LIFXSELECTOR "" //selector value for lifx calls
+#define LIFXSELECTOR "" //selector value for lifx calls.  See https://api.developer.lifx.com/docs/selectors
 
 #endif
