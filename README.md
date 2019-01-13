@@ -105,9 +105,9 @@ I highly recommend printing the controller sled and rgb button ring at 100% infi
 
 All other items can be printed without supports and at the infill level you prefer.  For my build, I chose 20-30% infill as my son can be rough with toys and I wanted it to survive a drop or two.
 
-### Bringing it Together
+## Bringing it Together
 
-## Main Body Assembly
+### Main Body Assembly
 1. Super glue the grip detail pieces to the main body.
 1. If you didn't already, solder the components to the protoboard, connect power and ground, and solder the three wires (digital in, power, and ground) to the NeoPixel.
 1. Press the NeoPixel into the rbg button ring and then install said ring in the center hole leaving about 1/8-1/4 inch protruding from the top of the main body.
@@ -121,7 +121,7 @@ All other items can be printed without supports and at the infill level you pref
 1. Solder the wires from steps 2 and 3 to the appropriate spot on the protoboard, making sure they line up with the correct pins on the Feather.
 1. If you used buttons with LEDs inside, you can solder them together and then to power at this time.
 
-## Housing Base Assembly
+### Housing Base Assembly
 1. Slide the protoboard into the controller sled.  The slot should be closer to the "top" of the sled and the Feather should be be visible from the top (see photo).  Be careful with this step - it is easy to break the sled.
 
     PHOTO OF BOARD IN BASE
