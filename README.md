@@ -68,15 +68,9 @@ Clone to this repository to a local working directory.  Rename lightMasterConfig
 
 Once you've updated the values, load the lightMasterMain.ino file into the Arduino IDE you configured earlier and flash the code to your board.  If you've setup both the config file and hardware correctly, you should see the neopixel ring light up in red, green, and blue and then all white once it's connected to your specified wifi network.  If the ring is unable to connect to the specified wifi, the ring will not turn white.
 
-![RGB Button at Startup](http://jasonsankovitch.com/wp-content/uploads/2018/12/rgbButtonStartup.gif)
-
 Once the button ring has gone white, you're good to test.  Each of the color buttons (and the non-center white) will cause the ring in the center to change.  If the ring is white when a button is pressed, it will change to be that color.  If the center ring is a primary color and a different primary color is pressed, the ring will become the secondary color that results from mixing the primary colors.  If white is pressed, the center ring will reset.
 
-    GIF OF COLORS CHANGING ON RGB
-
 To change the lights, you simply press the middle button when the ring is the color you want.
-
-    GIF OF LIGHT CHANGING
 
 If everything is working as expected, you're good to move on to creating the enclosure.
 
