@@ -2,12 +2,6 @@
 
 An open source remote control for your LIFX smart bulbs.
 
-## Folder Descriptions:
-
-*	src - arduino code for this project
-*	models - svg and stl files for the enclosure
-*	docs - circuit diagrams, documentation, etc.
-
 ## README Contents:
 
 *	Inspiration and Objectives
@@ -105,7 +99,7 @@ I highly recommend printing the controller sled and rgb button ring at 100% infi
 
 All other items can be printed without supports and at the infill level you prefer.  For my build, I chose 20-30% infill as my son can be rough with toys and I wanted it to survive a drop or two.
 
-![Assembly](https://github.com/jsankovitch/LM3000/blob/further-readme-refinements/docs/LM3000-parts.png)
+![Assembly](http://jasonsankovitch.com/wp-content/uploads/2019/01/LM3000-parts.png)
 
 ### Main Body Assembly
 1. Super glue the grip detail pieces to the main body.
@@ -113,7 +107,7 @@ All other items can be printed without supports and at the infill level you pref
 1. Press the NeoPixel into the rbg button ring and then install said ring in the center hole leaving about 1/8-1/4 inch protruding from the top of the main body.
 1. Solder and heat shrink wrap a wire to the positive lead of each arcade button.  The buttons will share a common ground and be wired in series.  Because of this, you need to wait for them to be installed into the enclosure before soldering.  Make sure you leave plenty of extra wire as you will want slack to enable you to solder the other ends of the wires to the protoboard.
 
-    IMAGE OF BUTTONS WITH WIRES
+![Buttons and wires!](http://jasonsankovitch.com/wp-content/uploads/2019/01/button_wires.jpeg)
 
 1. Install the buttons into the four outer holes.  The color order does not matter.
 1. Carefully install the second white arcade button into the rgb button ring.
@@ -124,7 +118,7 @@ All other items can be printed without supports and at the infill level you pref
 ### Housing Base Assembly
 1. Slide the protoboard into the controller sled.  The slot should be closer to the "top" of the sled and the Feather should be be visible from the top (see photo).  Be careful with this step - it is easy to break the sled.
 
-    PHOTO OF BOARD IN BASE
+![Board Installed](http://jasonsankovitch.com/wp-content/uploads/2019/01/board_installed.jpeg)
 
 1. Secure the battery into the base of the enclosure using double sided tape with the wires closer to the middle of the base rather than the edge. 
 1. Press the sled into the slots on the base making sure you run the bettery wire through the opening behind the protoboard.
