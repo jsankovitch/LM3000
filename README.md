@@ -66,7 +66,7 @@ Clone to this repository to a local working directory.  Rename lightMasterConfig
 * AUTH_TOKEN - the access token you generated at the beginning of this section.
 * LIFXSELECTOR - how you tell LIFX which light/s you want the LM3000 to control.  Documentation [here](https://api.developer.lifx.com/docs/selectors).
 
-Once you've updated the values, load the lightMasterMain.ino file into the Arduino IDE you configured earlier and flash the code to your board.  If you've setup both the config file and hardware correctly, you should see the neopixel ring light up in red, green, and blue and then all white once it's connected to your specified wifi network.  If the ring is unable to connect to the specified wifi, the ring will not turn white.
+Once you've updated the values, load the lightMasterMain.ino file into the Arduino IDE you configured earlier and flash the code to your board.  If you've setup both the config file and hardware correctly, you should see the NeoPixel ring light up in red, green, and blue and then all white once it's connected to your specified wifi network.  If the ring is unable to connect to the specified wifi, the ring will not turn white.
 
 Once the button ring has gone white, you're good to test.  Each of the color buttons (and the non-center white) will cause the ring in the center to change.  If the ring is white when a button is pressed, it will change to be that color.  If the center ring is a primary color and a different primary color is pressed, the ring will become the secondary color that results from mixing the primary colors.  If white is pressed, the center ring will reset.
 
@@ -83,13 +83,13 @@ Parts are as follows:
 * controller_sled_v1.stl - This is the part that holds the completed circuit board.
 * grip_detail_v1.stl - Small pieces that make the grip thicker.  I made these separate parts so they could be printed in different colors.
 * housing_base_v1.stl - This is the base of the device and holds the battery, power switch, and the circuit board via the controller sled.
-* main_body_v1.stl - This is the upper part of the device.  The buttons and rgb ring are attached to this piece and it slides over the housing base.
+* main_body_v1.stl - This is the upper part of the device.  The buttons and RGB ring are attached to this piece and it slides over the housing base.
 * rgb_button_ring_v1.stl - This is the housing for the 16 LED Neopixel we'll use to indicate the color to be sent to LIFX.  It fits into the center of the main body.
-* rgb_button_ring_spacer_v1_OPTIONAL.stl - This fits inside the rgb button ring AFTER you place the Neopixel inside if you need something to hold the Neopixel in place.  If the ring is secure without it, you don't have to print it.
+* rgb_button_ring_spacer_v1_OPTIONAL.stl - This fits inside the RGB button ring AFTER you place the Neopixel inside if you need something to hold the Neopixel in place.  If the ring is secure without it, you don't have to print it.
 
 All of these parts can be found in the /models directory of this repository as well as on Thingiverse.
 
-I highly recommend printing the controller sled and rgb button ring at 100% infill.  The sled can be a tight fit on the protoboard and one wrong move can snap a part printed with even a fairly moderate level of infill.  The rgb ring will nicely diffuse the Neopixel when printed at 100%.  Any lower, and you'll see the pattern of the infill.
+I highly recommend printing the controller sled and RGB button ring at 100% infill.  The sled can be a tight fit on the protoboard and one wrong move can snap a part printed with even a fairly moderate level of infill.  The RGB ring will nicely diffuse the Neopixel when printed at 100%.  Any lower, and you'll see the pattern of the infill.
 
 All other items can be printed without supports and at the infill level you prefer.  For my build, I chose 20-30% infill as my son can be rough with toys and I wanted it to survive a drop or two.
 
@@ -104,18 +104,18 @@ All other items can be printed without supports and at the infill level you pref
     ![Buttons and wires!](http://jasonsankovitch.com/wp-content/uploads/2019/01/button_wires.jpeg)
 
 1. Install the buttons into the four outer holes.  The color order does not matter.
-1. Carefully install the second white arcade button into the rgb button ring.
+1. Carefully install the second white arcade button into the RGB button ring.
 1. Solder the ground of the buttons in series and then to the protoboard.
 1. Solder the wires from steps 2 and 3 to the appropriate spot on the protoboard, making sure they line up with the correct pins on the Feather.
 1. If you used buttons with LEDs inside, you can solder them together and then to power at this time.
 
 ### Housing Base Assembly
-1. Slide the protoboard into the controller sled.  The slot should be closer to the "top" of the sled and the Feather should be be visible from the top (see photo).  Be careful with this step - it is easy to break the sled.
+1. Slide the protoboard into the controller sled.  The slot should be closer to the "top" of the sled and the Feather should be visible from the top (see photo).  Be careful with this step - it is easy to break the sled.
 
     ![Board Installed](http://jasonsankovitch.com/wp-content/uploads/2019/01/board_installed.jpeg)
 
 1. Secure the battery into the base of the enclosure using double sided tape with the wires closer to the middle of the base rather than the edge. 
-1. Press the sled into the slots on the base making sure you run the bettery wire through the opening behind the protoboard.
+1. Press the sled into the slots on the base making sure you run the battery wire through the opening behind the protoboard.
 1. Connect the battery leads to the Feather board.
 1. Press the power switch into the appropriate slots with the switch in the "off" position.
 1. Solder the wires from the protoboard to the switch.
@@ -123,7 +123,7 @@ All other items can be printed without supports and at the infill level you pref
 ## Final Assembly and Testing
 1. Plug the power supply into the 2.1mm barrel port and make sure the amber "battery charging" light comes on.
 1. Slide the main body over the base, making sure the port openings align, and press together.
-1. Turn on the main power switch and you should see the rgb ring light up in rainbow colors and then shift to white once connected to your access point.
+1. Turn on the main power switch and you should see the RGB ring light up in rainbow colors and then shift to white once connected to your access point.
 1. Once connected, the lights you specified should automatically turn on (assuming they have power).  You should be good to go at this point!
 
 ### Lessons Learned
