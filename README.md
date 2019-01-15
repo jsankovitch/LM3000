@@ -70,7 +70,7 @@ Clone to this repository to a local working directory.  Rename lightMasterConfig
 * SSID - the SSID of the wifi network you want to connect to.
 * SSID_PASSWORD - password for the above wifi network.
 * AUTH_TOKEN - the access token you generated at the beginning of this section.
-* LIFXSELECTOR - how you tell LIFX which light/s you want the LM3000 to control.  Documentation [here](https://api.developer.lifx.com/docs/selectors)
+* LIFXSELECTOR - how you tell LIFX which light/s you want the LM3000 to control.  Documentation [here](https://api.developer.lifx.com/docs/selectors).
 
 Once you've updated the values, load the lightMasterMain.ino file into the Arduino IDE you configured earlier and flash the code to your board.  If you've setup both the config file and hardware correctly, you should see the neopixel ring light up in red, green, and blue and then all white once it's connected to your specified wifi network.  If the ring is unable to connect to the specified wifi, the ring will not turn white.
 
@@ -105,7 +105,7 @@ I highly recommend printing the controller sled and rgb button ring at 100% infi
 
 All other items can be printed without supports and at the infill level you prefer.  For my build, I chose 20-30% infill as my son can be rough with toys and I wanted it to survive a drop or two.
 
-## Bringing it Together
+![Assembly](https://github.com/jsankovitch/LM3000/blob/master/docs/LM3000-parts.png)
 
 ### Main Body Assembly
 1. Super glue the grip detail pieces to the main body.
