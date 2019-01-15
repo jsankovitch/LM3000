@@ -105,7 +105,7 @@ I highly recommend printing the controller sled and rgb button ring at 100% infi
 
 All other items can be printed without supports and at the infill level you prefer.  For my build, I chose 20-30% infill as my son can be rough with toys and I wanted it to survive a drop or two.
 
-![Assembly](https://github.com/jsankovitch/LM3000/blob/master/docs/LM3000-parts.png)
+![Assembly](https://github.com/jsankovitch/LM3000/blob/further-readme-refinements/docs/LM3000-parts.png)
 
 ### Main Body Assembly
 1. Super glue the grip detail pieces to the main body.
