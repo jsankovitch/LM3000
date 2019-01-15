@@ -53,7 +53,7 @@ If this is your first time using the Adafruit Feather HUZZAH ESP8266, I suggest 
 
 My other recommendation around hardware is to "pre-fit" the components and connect them according to the diagram below without soldering anything.  You can do this with a breadboard, breadboard jumpers, and alligator clips.  This way you can make sure everything works prior to making connections that are more difficult to remove/redo if you find you have a faulty component or misread the wiring diagram.
 
-![Circuit diagram](http://jasonsankovitch.com/wp-content/uploads/2018/12/lm3000_fritz_diagram.png)
+![Circuit diagram](http://jasonsankovitch.com/wp-content/uploads/2019/01/lm3000-curves_bb.png)
 
 ### Prep the Software
 
